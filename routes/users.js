@@ -23,16 +23,6 @@ function validarUsuario(req,res,next){
 
 // GET USER
 
-router.get("/users",(req,res)=>{
-    //return res.status(200).json({message: "Usuários cadastrados: ", usuarios})
-    db.all("SELECT id, name, password FROM usuarios", (err, rows)=>{
-        if (err) {
-            return res.status(500).json({Erro: "erro ao listar usuários"})
-        }
-        return res.status(200).json({Usuarios: rows})
-    })
-})
-
 // POST USER
 
 router.post("/users",validarUsuario, async(req,res)=>{
@@ -46,13 +36,6 @@ router.post("/users",validarUsuario, async(req,res)=>{
         }
         return res.status(201).json({message: "Usuário criado!",})
     })
-
-//    const usuario = {
-//        id: contador,
-//        name: name,
-//        password: hashedPassword
-//    }
-//  usuarios.push(usuario)
 })
 
 router.post("/login", validarUsuario, async (req, res)=>{
@@ -87,16 +70,5 @@ router.put("/users/:id",validarUsuario, (req,res)=>{
 })
 
 // DELETE USER
-
-router.delete("/users/:id",(req,res)=>{
-    const id = Number(req.params.id)
-    const index = usuarios.findIndex(u => u.id === id)
-
-    if (index === -1) return res.status(404).json({error: "Usuário não encontrado."})
-
-    usuarios.splice(index, 1)
-
-    return res.status(200).json({message: "Usuário removido com sucesso!", usuarios})
-})
 
 module.exports = router
