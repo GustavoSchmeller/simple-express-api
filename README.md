@@ -1,4 +1,4 @@
-[🧩 API REST com Express, Supabase, Bcrypt e Sessões
+🧩 API REST com Express, Supabase, Bcrypt e Sessões
 
 🚧 Projeto em desenvolvimento — novas funcionalidades e melhorias estão sendo implementadas.
 
@@ -8,24 +8,19 @@ O objetivo é criar uma base sólida para um sistema de autenticação e gerenci
 🚀 Tecnologias utilizadas
 
 Node.js
-
 Express.js
-
 Supabase
-
 Bcrypt
-
 Express-session
-
 Dotenv
 
 ⚙️ Configuração do ambiente
+
 1️⃣ Instalação das dependências
 npm install express dotenv @supabase/supabase-js
 npm install bcrypt express-session
 
 2️⃣ Configuração das variáveis de ambiente
-
 Crie um arquivo .env na raiz do projeto com as chaves do seu Supabase:
 
 SUPABASE_URL=https://seu-projeto.supabase.co
@@ -36,28 +31,27 @@ SUPABASE_KEY=sua-chave-api
 Para iniciar o servidor local:
 
 node index.js
-
-
-Saída esperada:
-
-Servidor rodando
-
-
-O servidor padrão roda na porta 8080.
+(Saída esperada: "Servidor rodando")
 
 📚 Endpoints disponíveis
 👤 Usuários (pessoa)
+
 Método	Rota	Descrição
+
 POST	/pessoa	Cadastra uma nova pessoa (com senha criptografada)
 GET	/pessoa	Lista todas as pessoas
 GET	/pessoa/:id	Retorna uma pessoa específica
 PUT	/pessoa/:id	Atualiza uma pessoa existente
 DELETE	/pessoa/:id	Exclui uma pessoa pelo ID
+
 🔐 Autenticação
+
 Método	Rota	Descrição
 POST	/login	Realiza login com validação de senha
 POST	/logout	Encerra a sessão do usuário
+
 🧠 Estrutura de tabelas (Supabase)
+
 Tabela pessoa
 Campo	Tipo	Descrição
 id	int (auto increment)	Identificador único
@@ -65,14 +59,12 @@ nome	text	Nome do usuário
 idade	int	Idade (mínimo 18 anos)
 curso	text	Curso ou área
 senha	text	Hash da senha gerada com bcrypt
+
 🔐 Criptografia e Sessão
 
 As senhas são criptografadas com bcrypt antes de serem salvas no banco.
-
 No login, a senha digitada é comparada com o hash do banco usando bcrypt.compare.
-
 Após autenticação bem-sucedida, os dados essenciais são armazenados em req.session.data.
-
 No logout, a sessão é encerrada e o cookie connect.sid é limpo.
 
 🧩 Estrutura sugerida de pastas
