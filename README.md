@@ -1,4 +1,4 @@
-🧩 API REST com Express, Supabase, Bcrypt e Sessões
+[🧩 API REST com Express, Supabase, Bcrypt e Sessões
 
 🚧 Projeto em desenvolvimento — novas funcionalidades e melhorias estão sendo implementadas.
 
@@ -137,4 +137,4 @@ Recomenda-se configurar CORS e middlewares de segurança em ambientes reais.
 
 📜 Licença
 
-Este projeto está sob a licença MIT — livre para uso, modificação e aprendizado.
+Este projeto está sob a licença MIT — livre para uso, modificação e aprendizado.](https://chatgpt.com/c/6906895a-e7ec-8330-939c-f0edb71ba940)
