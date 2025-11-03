@@ -1,0 +1,1 @@
+npm install express dotenv @supabase/supabase-js

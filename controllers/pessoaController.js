@@ -5,7 +5,6 @@ export async function adicionarPessoa(req,res){
     try{
 
         const { nome,idade,curso,senha } = req.body
-
         const senhaCriptografa = await bcrypt.hash(senha, 10)
 
         const { error:postErro } = await supabase
