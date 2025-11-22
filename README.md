@@ -127,6 +127,3 @@ Recomenda-se configurar CORS e middlewares de segurança em ambientes reais.
 
  Documentação via Swagger
 
-📜 Licença
-
-Este projeto está sob a licença MIT — livre para uso, modificação e aprendizado.](https://chatgpt.com/c/6906895a-e7ec-8330-939c-f0edb71ba940)
